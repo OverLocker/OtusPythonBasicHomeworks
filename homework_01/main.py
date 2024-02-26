@@ -20,13 +20,13 @@ PRIME = "prime"
 
 def is_prime(n: int) -> bool:
     is_n_prime = True
-    if n in (0,1):
-        is_n_prime = False
-    else:
+    if n not in (0,1):
         for d in range(2, n//2+1):
             if n % d == 0:
                 is_n_prime = False
                 break
+    else:
+        is_n_prime = False
     return is_n_prime
 
 
