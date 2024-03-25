@@ -12,7 +12,7 @@ class LowFuelError(BaseException):
     pass
 
 
-class NotEnoughtFuel(BaseException):
+class NotEnoughFuel(BaseException):
     pass
 
 

@@ -1,6 +1,6 @@
 from abc import ABC
 from exceptions import LowFuelError
-from exceptions import NotEnoughtFuel
+from exceptions import NotEnoughFuel
 
 
 class Vehicle(ABC):
@@ -22,7 +22,7 @@ class Vehicle(ABC):
         if self.fuel >= waisted:
             self.fuel -= waisted
         else:
-            raise NotEnoughtFuel
+            raise NotEnoughFuel
 
 
 
