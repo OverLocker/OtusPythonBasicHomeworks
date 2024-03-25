@@ -11,11 +11,10 @@ class Vehicle(ABC):
         self.fuel_consumption = fuel_consumption
 
     def start(self):
-        if not self.started:
-            if self.fuel > 0:
-                self.started = True
-            else:
-                raise LowFuelError
+        if not self.started and self.fuel > 0:
+            self.started = True
+        else:
+            raise LowFuelError
 
     def move(self, distance):
         waisted = distance * self.fuel_consumption
